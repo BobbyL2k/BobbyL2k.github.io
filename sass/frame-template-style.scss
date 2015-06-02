@@ -1,0 +1,110 @@
+/*//////////////
+	parallax css
+//////////////*/
+
+$fts-body-fallback-height: 500px !default;
+$fts-body-height: 100vh !default;
+
+$fts-frame-scale: 0.5 !default;
+
+$fts-frame-fallback-height: $fts-body-fallback-height * $fts-frame-scale !default;
+$fts-frame-height: 			$fts-body-height * $fts-frame-scale !default;
+
+$fts-small-frame-scale: 0.2 !default;
+
+$fts-small-frame-fallback-height:	$fts-body-fallback-height * $fts-small-frame-scale !default;
+$fts-small-frame-height: 			$fts-body-height * $fts-small-frame-scale !default;
+
+.body {
+	height: $fts-body-fallback-height; /* fallback for older browsers */
+	height: $fts-body-height; /* set view port for content */
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 64px;
+	perspective: 64px;
+	.frame{
+		height: $fts-frame-fallback-height; /* fallback for older browsers */
+		height: $fts-frame-height;
+		min-height: 10em;
+		&.small{
+			height: $fts-small-frame-fallback-height; /* fallback for older browsers */
+			height: $fts-small-frame-height;
+			min-height: 6em;
+			
+			&:nth-child(odd) {
+				z-index: 1;
+				.layer.back{
+					transform: translateZ(-16px) scale(2.5);	
+				}
+			}
+		}
+		width: 100vw;
+		position: relative;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		
+		visibility: hidden;
+		* {
+			visibility: visible;
+		}
+		&.topic{
+		  	font-size: 1.5em;
+			height: 1em;
+			padding: 1em 0 1em;
+		  	visibility: visible;
+		  
+		  	.content{
+			  position: static;
+			}
+		}
+		
+		&:nth-child(odd) {
+			z-index: 1;
+			.layer.back{
+				-webkit-transform: translateZ(-16px) scale(1.5);
+				transform: translateZ(-16px) scale(1.5);
+				z-index: 2;
+			}
+			.layer.semi-back{
+				-webkit-transform: translateZ(-16px) scale(1.25);
+				transform: translateZ(-16px) scale(1.25);
+				z-index: 3;
+			}
+			.layer.front{
+				-webkit-transform: none;
+				transform: none;
+				z-index: 4;
+			}
+		}
+		
+		&:nth-child(even),&.forcefront {
+			z-index: 5;
+			.layer.back{
+				-webkit-transform: none;
+				transform: none;
+				z-index: 6;
+			}
+			.layer.front{
+				-webkit-transform: translateZ(8px) scale(0.875);	
+				transform: translateZ(8px) scale(0.875);	
+				z-index: 7;
+			}
+		}
+		
+		.layer {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			&:first-child {
+				background-color: inherit;
+				background-image: inherit;
+				background-position: inherit;
+				background-size: cover;
+			}
+		}
+	}
+}

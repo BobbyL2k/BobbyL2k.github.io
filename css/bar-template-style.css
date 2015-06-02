@@ -1,0 +1,23 @@
+.bar {
+  overflow: auto; }
+  .bar:first-child {
+    color: #EEE;
+    background-color: #444;
+    height: 1em;
+    padding: 1em 0 1em 0; }
+    .bar:first-child ul.option {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .bar:first-child ul.option li {
+        display: inline;
+        padding: 0.2em 1em; }
+        .bar:first-child ul.option li.selected {
+          border-bottom: solid 0.3em #EEE; }
+  .bar:last-child {
+    color: #EEE;
+    background-color: #444;
+    height: 1em;
+    padding: 1em 0 1em 0; }
+
+/*# sourceMappingURL=bar-template-style.css.map */

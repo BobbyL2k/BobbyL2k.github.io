@@ -1,0 +1,56 @@
+$bar-color: #EEE !default;
+$bar-background-color: #444 !default;
+$bar-height: 1em !default;
+$bar-padding-top: 1em !default;
+$bar-padding-right: 0 !default;
+$bar-padding-bottom: 1em !default;
+$bar-padding-left: 0 !default;
+
+.bar{
+	overflow: auto;
+	&:first-child{
+		
+		$top-bar-color: $bar-color !default;
+		$top-bar-background-color: $bar-background-color !default;
+		$top-bar-height: $bar-height !default;
+		$top-bar-padding-top: $bar-padding-top !default;
+		$top-bar-padding-right: $bar-padding-right !default;
+		$top-bar-padding-bottom: $bar-padding-bottom !default;
+		$top-bar-padding-left: $bar-padding-left !default;
+		
+		color: $top-bar-color;
+		background-color: $top-bar-background-color;
+		height: $top-bar-height;
+		padding: $top-bar-padding-top $top-bar-padding-right $top-bar-padding-bottom $top-bar-padding-left;
+		
+		ul.option{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li{
+				display: inline;
+				padding: 0.2em 1em;
+				$selected-bar-color: $bar-color !default;
+				&.selected{
+					border-bottom: solid ($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom)/10 $selected-bar-color;
+				}
+			}
+		}
+	}
+	&:last-child{
+		
+		$bottom-bar-color: $bar-color !default;
+		$bottom-bar-background-color: $bar-background-color !default;
+		$bottom-bar-height: $bar-height !default;
+		$bottom-bar-padding-top: $bar-padding-top !default;
+		$bottom-bar-padding-right: $bar-padding-right !default;
+		$bottom-bar-padding-bottom: $bar-padding-bottom !default;
+		$bottom-bar-padding-left: $bar-padding-left !default;
+		
+		color: $bottom-bar-color;
+		background-color: $bottom-bar-background-color;
+		height: $bottom-bar-height;
+		padding: $bottom-bar-padding-top $bottom-bar-padding-right $bottom-bar-padding-bottom $bottom-bar-padding-left;
+	}
+}

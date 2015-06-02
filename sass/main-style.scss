@@ -1,0 +1,165 @@
+//Material Blue
+$std-color: #2196F3;
+$c50: #E3F2FD;
+$c100: #BBDEFB;
+$c200: #90CAF9;
+$c300: #64B5F6;
+$c400: #42A5F5;
+$c500: #2196F3;
+$c600: #1E88E5;
+$c700: #1976D2;
+$c800: #1565C0;
+$c900: #0D47A1;
+$cA100: #82B1FF;
+$cA200: #448AFF;
+$cA400: #2979FF;
+$cA700: #2962FF;
+
+body{
+	color: $c50;
+}
+
+$dark-color: $c50;
+$dark-background-color: $c900;
+$dark-background-color-2: $c800;
+$light-color: $c800;
+$light-background-color: $c50;
+$light-background-color-2: $c200;
+@import 'l2k-std-style';
+
+$bar-background-color: $std-color;
+$bar-color: $c50;
+$selected-bar-color: $c50;
+@import 'bar-template-style';
+
+@import 'frame-template-style';
+
+@import 'block-template-style';
+
+.body{
+	height: calc(100vh - 3em);
+}
+
+img.logo{
+	min-width: 80%; /* fallback */
+	min-width: $fts-frame-height * 4/5;
+	min-height: $fts-frame-fallback-height * 4/5; /* fallback */
+	min-height: $fts-frame-height * 4/5;
+}
+
+#frame1{
+	.profile-pic{
+		@extend .circle;
+		height: 200px;
+		height: 33vw;
+		max-height: 40vh;
+		width: 200px;
+		width: 33vw;
+		max-width: 40vh;
+	}
+}
+
+#frame4{
+	min-height: 290px;
+	table{
+		width: 100%;
+		table-layout: fixed;
+	}
+	.ioi-block{
+		margin: 1em 1em 0.25em;
+		padding: 1.5em 0;
+		color: white;
+		box-sizing: border-box;
+		border-radius: 0.25em;
+		&.joined{
+			$g-c200: #A5D6A7;
+			background-color: $g-c200;
+		}
+		&.not-joined{
+			$r-c200: #EF9A9A ;
+			background-color: $r-c200;
+		}
+	}
+	a > h4{
+		font-weight: 500;
+	}
+	h3, h4{
+		margin: 0;
+		text-align: center;
+	}
+}
+
+#frame5{
+	background-image: url(../assets/images/TOI-7.jpg);
+}
+
+$good: #4CAF50;
+$medium: #FF9800;
+$bad: #F44336;
+
+#frame9, #frame10{
+	table .box{
+		text-align: center;
+		border: 1px solid;
+		border-radius: 5px;
+		height: 3em;
+		line-height: 3em;
+		box-sizing: border-box;
+	}
+	
+	th .box{
+		height: 2em;
+		line-height: 2em;
+		font-weight: 400;
+	}
+	
+	.hoverbox{
+		position: relative;
+		.tooltip{
+			
+			&.good{
+				color: $good;
+			}
+			&.medium{
+				color: $medium;
+			}
+			&.bad{
+				color: $bad;
+			}
+			
+			@extend .box;
+			background-color: white;
+			color: $light-color;
+			position: absolute;
+			bottom: 0;
+			border: none !important;
+			height: 0 !important;
+			width: 100% !important;
+			box-sizing: border-box;
+			overflow: hidden;
+			transition:All 0.2s ease;
+		}
+		&:hover .tooltip{
+			border: 1px solid !important;
+			height: 100% !important;
+		}
+	}
+}
+
+#frame9{
+	table .box{
+		width: 5em;
+	}
+	th .box{
+		width: 100%;
+	}
+	.tooltop{
+		left: 5em;
+	}
+}
+
+#frame10{
+	table{
+		table-layout: fixed;
+	}
+}

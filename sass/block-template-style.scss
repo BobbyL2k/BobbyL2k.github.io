@@ -1,0 +1,109 @@
+.row{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.row-1{
+	@extend .row;
+	height: 1/12*100%;
+}
+.row-2{
+	@extend .row;
+	height: 2/12*100%;
+}
+.row-3{
+	@extend .row;
+	height: 3/12*100%;
+}
+.row-4{
+	@extend .row;
+	height: 4/12*100%;
+}
+.row-5{
+	@extend .row;
+	height: 5/12*100%;
+}
+.row-6{
+	@extend .row;
+	height: 6/12*100%;
+}
+.row-7{
+	@extend .row;
+	height: 7/12*100%;
+}
+.row-8{
+	@extend .row;
+	height: 8/12*100%;
+}
+.row-9{
+	@extend .row;
+	height: 9/12*100%;
+}
+.row-10{
+	@extend .row;
+	height: 10/12*100%;
+}
+.row-11{
+	@extend .row;
+	height: 11/12*100%;
+}
+.row-12{
+	@extend .row;
+	height: 12/12*100%;
+}
+
+.col{
+	height: 100%;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.col-1{
+	@extend .col;
+	width: 1/12*100%;
+}
+.col-2{
+	@extend .col;
+	width: 2/12*100%;
+}
+.col-3{
+	@extend .col;
+	width: 3/12*100%;
+}
+.col-4{
+	@extend .col;
+	width: 4/12*100%;
+}
+.col-5{
+	@extend .col;
+	width: 5/12*100%;
+}
+.col-6{
+	@extend .col;
+	width: 6/12*100%;
+}
+.col-7{
+	@extend .col;
+	width: 7/12*100%;
+}
+.col-8{
+	@extend .col;
+	width: 8/12*100%;
+}
+.col-9{
+	@extend .col;
+	width: 9/12*100%;
+}
+.col-10{
+	@extend .col;
+	width: 10/12*100%;
+}
+.col-11{
+	@extend .col;
+	width: 11/12*100%;
+}
+.col-12{
+	@extend .col;
+	width: 12/12*100%;
+}
