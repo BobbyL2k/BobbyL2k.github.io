@@ -110,3 +110,9 @@ h1,h2,h3,h4,h5,h6,h7,h8{
 	background-color: rgba(0,0,0,0.5);
 	color: white;
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.ie-hide{
+		display: none;
+	}
+}
