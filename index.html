@@ -22,8 +22,12 @@
 		<div class="body">
 			<div id="frame1" class="frame light">
 				<div class="layer back"></div>
-				<!--[if !IE]> -->
-				<div class="layer semi-back shadow">
+				<!--[if IE]>
+				<style>
+				.ie-hide { display:none; }
+				</style>
+				<![endif]-->
+				<div class="ie-hide layer semi-back shadow">
 					<div class="content">
 						<div class="row">
 							<div class="col-8">
@@ -33,7 +37,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <![endif]-->
 				<div class="layer front container">
 					<div class="content">
 						<div class="row">
